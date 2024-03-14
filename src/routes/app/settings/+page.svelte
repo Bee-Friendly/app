@@ -9,10 +9,10 @@ import {
 
 <main>
     <ul>
-        <li><a href="./profile"><User /> <span>Profile</span></a></li>
-        <li><a href="./preferences"><Settings2 /> <span>Preferences</span></a></li>
-        <li><a href="./tos"><FileText /> <span>Terms of Service</span></a></li>
-        <li><a href="./about"><Info /> <span>About</span></a></li>
+        <li><a href="/app/settings/profile"><User /> <span>Profile</span></a></li>
+        <li><a href="/app/settings/preferences"><Settings2 /> <span>Preferences</span></a></li>
+        <li><a href="/app/settings/tos"><FileText /> <span>Terms of Service</span></a></li>
+        <li><a href="/app/settings/about"><Info /> <span>About</span></a></li>
     </ul>
 </main>
 

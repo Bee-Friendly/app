@@ -7,7 +7,7 @@
     $: current = $page.route.id == path;
 </script>
 
-<a href={path} class:current>
+<a href={'/app/' + path} class:current>
     <li>
         <slot>
             <!-- Icon sits here -->
