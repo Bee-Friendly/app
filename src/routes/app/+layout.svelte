@@ -13,23 +13,23 @@
 
     <nav>
         <ul>
-            <NavElement path="home" label="Home">
+            <NavElement path="/app/home" label="Home">
                 <Home />
             </NavElement>
 
-            <NavElement path="calendar" label="Calendar">
+            <NavElement path="/app/calendar" label="Calendar">
                 <CalendarDays />
             </NavElement>
 
-            <NavElement path="add">
+            <NavElement path="/app/add">
                 <PlusCircle size={32} />
             </NavElement>
 
-            <NavElement path="gifts" label="Rewards">
+            <NavElement path="/app/gifts" label="Rewards">
                 <Gift />
             </NavElement>
 
-            <NavElement path="settings" label="Settings">
+            <NavElement path="/app/settings" label="Settings">
                 <Settings />
             </NavElement>
         </ul>

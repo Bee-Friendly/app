@@ -1,10 +1,14 @@
 <script>
     import { enhance } from "$app/forms";
+    import { displayToast } from "$lib/toast";
 
     /**
      * @type {import("./$types").ActionData}
      */
     export let form;
+    $: if(form?.message != undefined) {
+        displayToast(form?.message);
+    }
 </script>
 
 <main>
@@ -13,9 +17,7 @@
         <input type="password" name="password" placeholder="Password" />
         <input type="submit" value="Login" />
     </form>
-    {#if form?.message != undefined}
-        <p>{form.message}</p>
-    {/if}
+    
 </main>
 
 <style>

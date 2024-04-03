@@ -3,11 +3,11 @@
     export let path;
 
     import { page } from '$app/stores';
-    
+
     $: current = $page.route.id == path;
 </script>
 
-<a href={'/app/' + path} class:current>
+<a href={path} class:current>
     <li>
         <slot>
             <!-- Icon sits here -->

@@ -1,6 +1,19 @@
 <script>
     import { goto } from "$app/navigation";
+    import { onDestroy, onMount } from "svelte";
 
+    // verifying if today's video already exists
+    onMount(async () => {
+        const alreadyUploadedToday = await fetch('/api/verify-already-uploaded').then(r => r.text());
+
+        console.log(alreadyUploadedToday);
+
+        if(alreadyUploadedToday === 'true') {
+            confirm('Warning : you already uploaded a video today !\nIf you upload another video, it will replace the current one.');
+        }
+    });
+
+    /** @type {MediaStream} */
     let stream = null;
     /**
      * @type {MediaRecorder}
@@ -10,6 +23,10 @@
     let recording = false;
 
     let buttonElement;
+
+    onDestroy(() => {
+        stream?.getTracks().forEach(t => t.stop());
+    });
 
     /**
      * 
